@@ -1,0 +1,75 @@
+/*---------------------------------------------------------------------------\
+@author: Josh Hoeg
+@company: Raptor Design and Developement
+Copyright (c) 2017 Copyright Holder All Rights Reserved.
+
+The CSS file below is seperated into clear and definied sections all of the code
+below was written by myself and does not infringe on any copyrighted material.
+It was created for a company called A Different Dimension, and if for any reason
+it is used for other reasons.... Well haha not much I can do about it so go for it.
+Just remember I probably suck at coding ;)
+\---------------------------------------------------------------------------*/
+
+.container-fluid{
+  padding: 0 !important;
+}
+
+
+
+.content-area{
+  margin-left: 160px;
+}
+
+
+
+
+ /*---------------------------------------------------------------------------\
+|                                Navbar styling                               |
+\---------------------------------------------------------------------------*/
+.left{
+  display: table;
+  width: 160px;
+  float: left;
+  position: fixed;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+.sidenav{
+  height: 100%;
+  display: block;
+}
+.sidenav .sidenav-brand{
+  display: block;
+  vertical-align: middle;
+  height: 30%;
+}
+.sidenav .sidenav-menu{
+  display: block;
+  vertical-align:bottom;
+  height: 60%%;
+}
+.sidenav .sidenav-brand img{
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+.sidenav .sidenav-menu ul, .sidenav .sidenav-menu li, .sidenav .sidenav-menu li a{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.master-slider-parent, .ms-inner-controls-cont{
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+ .ms-slide-link{
+   width: 100% !important;
+ }
