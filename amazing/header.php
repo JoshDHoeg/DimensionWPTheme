@@ -37,10 +37,15 @@
 						);
 					?>
 				</div>
-				<div class="sidenav-social">
-
-				</dv>
 			</nav>
+		</div>
+
+		<div class="sidenav-social">
+			<?php	if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
+			<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+				<?php dynamic_sidebar( 'custom-header-widget' ); ?>
+			</div>
+			<?php endif; ?>
 		</div>
 			<!-- </nav>
 				<nav class="navbar navbar-default">

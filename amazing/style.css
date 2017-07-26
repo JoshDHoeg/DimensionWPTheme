@@ -1,11 +1,97 @@
 /*
-	Theme Name: Awesome Theme
-	Theme URI: http://alecaddd.com/awesometheme
-	Author: Alecaddd
-	Author URI: http://alecaddd.com
-	Description: This is an awesome theme
+	Theme Name: Dimension Theme
+	Author: Josh Hoeg
+	Author URI: http://joshdhoeg.com
+	Description: This is a theme designed for a company called A Different Dimension, it should be responsive to all devices. The theme should have give the impression of being from a different dimension and refrain from being like any other regular wordpress theme.
 	Version: 0.1 alpha
-	License: GNU General Public License v2 or later
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Tags: black, white, responsive, one-column, two-columns, featured-images, custom-menu, custom-header, post-formats
+	Tags: black, responsive, one-column, two-columns, featured-images, custom-menu, custom-header, post-formats, sidenav
+  Copyright (c) 2017 Copyright Holder All Rights Reserved.
 */
+
+/*---------------------------------------------------------------------------\
+The CSS file below is seperated into clear and definied sections all of the code
+below was written by myself and does not infringe on any copyrighted material.
+It was created for a company called A Different Dimension, and if for any reason
+it is used for other reasons.... Well haha not much I can do about it so go for it.
+Just remember I probably suck at coding ;)
+\---------------------------------------------------------------------------*/
+body{
+  overflow-x: hidden;
+}
+
+.container-fluid{
+  padding: 0 !important;
+}
+
+
+
+.content-area{
+  margin-left: 150px;
+}
+
+
+
+
+ /*---------------------------------------------------------------------------\
+|                                Navbar styling                               |
+\---------------------------------------------------------------------------*/
+.left{
+  display: table;
+  width: 150px;
+  float: left;
+  position: fixed;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.sidenav{
+  height: 100%;
+  display: block;
+}
+.sidenav .sidenav-brand{
+  display: block;
+
+}
+.sidenav .sidenav-menu{
+  display: block;
+
+}
+.sidenav .sidenav-brand img{
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+.sidenav .sidenav-menu ul, .sidenav .sidenav-menu li, .sidenav .sidenav-menu li a{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.sidenav .sidenav-menu a{
+  color: #ffffff;
+  font-size: 20px;
+}
+.sidenav .sidenav-menu a:hover{
+  color: #000000;
+}
+/*sidenav socials section*/
+.sidenav-social{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center !important;
+}
+.sidenav-social p{
+  padding: 0;
+  margin: 0;
+  background: #000000;
+}
+.sidenav-social .social-link{
+  display: inline;
+}
+.sidenav-social .social-link img{
+  width: 50px;
+  padding: 10px;
+  display: inline-block;
+}
+@media only screen and (max-width: 768px) {
+
+}
