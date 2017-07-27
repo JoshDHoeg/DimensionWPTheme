@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title>Awesome Theme</title>
 		<?php wp_head(); ?>
 	</head>
@@ -18,15 +21,9 @@
 
 	<body <?php body_class( $awesome_classes ); ?>>
 
-		<div class="left">
-			<nav class="sidenav">
-				<div class="sidenav-brand">
-					<?php
-						$custom_logo_id = get_theme_mod( 'custom_logo' );
-						$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-					?>
-					<a class="sidenav-brand-logo" href=""><img src="<?php echo $image[0]; ?>"></a>
-				</div>
+		<!--desktop navbar-->
+		<div class="left-nav">
+			<nav class="sidenav" id="sidenav">
 				<div class="sidenav-menu">
 					<?php
 						wp_nav_menu(array(
@@ -37,16 +34,33 @@
 						);
 					?>
 				</div>
+				<div class="sidenav-social">
+					<?php	if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
+					<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+						<?php dynamic_sidebar( 'custom-header-widget' ); ?>
+					</div>
+					<?php endif; ?>
+				</div>
 			</nav>
+			<div class="sidenav-brand">
+				<?php
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				?>
+				<a class="sidenav-brand-logo" href=""><img src="<?php echo $image[0]; ?>"></a>
+			</div>
+			<div class="sidenav-toggle" onclick="navclose()" id="navclose">
+					<span>&#8918;</span>
+			</div>
+			<div class="sidenav-toggle" onclick="navopen()" id="navopen">
+					<span>&#8919;</span>
+			</div>
 		</div>
 
-		<div class="sidenav-social">
-			<?php	if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
-			<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
-				<?php dynamic_sidebar( 'custom-header-widget' ); ?>
-			</div>
-			<?php endif; ?>
-		</div>
+
+		<!--mobile nav-->
+
+
 			<!-- </nav>
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">

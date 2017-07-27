@@ -35,30 +35,55 @@ body{
  /*---------------------------------------------------------------------------\
 |                                Navbar styling                               |
 \---------------------------------------------------------------------------*/
-.left{
-  display: table;
+.sidenav{
+  background: rgba(0,0,0,0.75);
+  height: 100%;
+  display: block;
+  width: 150px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+}
+.left-nav{
   width: 150px;
   float: left;
   position: fixed;
   height: 100%;
-  background: rgba(0,0,0,0.5);
 }
-.sidenav{
-  height: 100%;
-  display: block;
+.sidenav-toggle{
+  position: fixed;
+  margin-top: -16px;
+  display: none;
+    z-index: 100;
 }
-.sidenav .sidenav-brand{
+#navopen{
+  padding-left: 10px;
+}
+#navclose{
+  right: 0;
+  top: 0;
+  padding-right: 20px;
+  display: none;
+}
+.sidenav-toggle span{
+  font-size: 64px;
+  color: #ffffff;
+}
+.sidenav-brand{
   display: block;
-
+  z-index: 10;
+}
+.sidenav-brand img{
+  width: 150px;
+  display: block;
+  margin: 0;
+  top: 0;
+  left: 0;
 }
 .sidenav .sidenav-menu{
   display: block;
-
-}
-.sidenav .sidenav-brand img{
-  width: 150px;
-  display: block;
-  margin: auto;
+  padding-top: 100px;
 }
 .sidenav .sidenav-menu ul, .sidenav .sidenav-menu li, .sidenav .sidenav-menu li a{
   display: block;
@@ -93,5 +118,32 @@ body{
   display: inline-block;
 }
 @media only screen and (max-width: 768px) {
-
+  .sidenav{
+    display: none;
+    width: 0;
+  }
+  .left-nav{
+    width: 100%;
+  }
+  .sidenav-brand{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+  }
+  .sidenav-brand img{
+    margin: auto;
+    display: block;
+  }
+  .content-area{
+    margin-left: 0;
+  }
+  .sidenav-social{
+      width: 100%;
+  }
+  .sidenav-toggle{
+    display: block;
+  }
+  #navclose{
+    display: none;
+  }
 }
