@@ -16,7 +16,7 @@ it is used for other reasons.... Well haha not much I can do about it so go for 
 Just remember I probably suck at coding ;)
 \---------------------------------------------------------------------------*/
 body{
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 .container-fluid{
@@ -25,10 +25,15 @@ body{
 
 
 
-.content-area{
-  margin-left: 150px;
+.content-wrapper{
+  padding-left: 150px;
+  position: relative;
 }
-
+@media only screen and (max-width: 768px) {
+  .content-wrapper{
+    margin-left: 0;
+  }
+}
 
 
 
@@ -73,9 +78,11 @@ body{
 .sidenav-brand{
   display: block;
   z-index: 10;
+  position: fixed;
 }
 .sidenav-brand img{
   width: 150px;
+  z-index: 10;
   display: block;
   margin: 0;
   top: 0;
@@ -124,9 +131,9 @@ body{
   }
   .left-nav{
     width: 100%;
+    z-index: 5;
   }
   .sidenav-brand{
-    position: fixed;
     width: 100%;
     text-align: center;
   }
@@ -146,4 +153,20 @@ body{
   #navclose{
     display: none;
   }
+}
+
+
+ /*---------------------------------------------------------------------------\
+|                          content item styling                               |
+\---------------------------------------------------------------------------*/
+.content-item{
+  display: inline;
+}
+.content-item .thumbnail{
+  z-index: 1;
+  position: relative;
+}
+.post-btn{
+  height: 400px;
+  width: 600px;
 }
