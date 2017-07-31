@@ -21,10 +21,10 @@
 
 	<body <?php body_class( $awesome_classes ); ?>>
 
-		<!--desktop navbar-->
-		<div class="left-nav">
-			<nav class="sidenav" id="sidenav">
-				<div class="sidenav-menu">
+
+		<div class="left-nav"><!--navbar container-->
+			<nav class="sidenav" id="sidenav"><!--navbar content-->
+				<div class="sidenav-menu"><!--navbar menu-->
 					<?php
 						wp_nav_menu(array(
 							'theme_location' => 'primary',
@@ -34,7 +34,7 @@
 						);
 					?>
 				</div>
-				<div class="sidenav-social">
+				<div class="sidenav-social"><!--navbar social links/widgets-->
 					<?php	if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
 					<div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
 						<?php dynamic_sidebar( 'custom-header-widget' ); ?>
@@ -42,23 +42,26 @@
 					<?php endif; ?>
 				</div>
 			</nav>
-			<div class="sidenav-brand">
+			<div class="sidenav-brand"><!--navbar logo-->
 				<?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				?>
 				<a class="sidenav-brand-logo" href="/"><img src="<?php echo $image[0]; ?>"></a>
 			</div>
-			<div class="sidenav-toggle" onclick="navclose()" id="navclose">
+			<div class="sidenav-toggle" onclick="navclose()" id="navclose"><!--navbar close-->
 					<span>&#8918;</span>
 			</div>
-			<div class="sidenav-toggle" onclick="navopen()" id="navopen">
+			<div class="sidenav-toggle" onclick="navopen()" id="navopen"><!--navbar open-->
 					<span>&#8919;</span>
 			</div>
-		</div>
+		</div><!--navbar container-->
 
 
-		<div class="container-fluid">
+		<section class="container-fluid"><!-- background wrapper-->
 
+			<!-- background image from wp -->
 			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-			<section class="content-wrapper container">
+
+			<!-- content outer wrapper -->
+			<div class="content-wrapper container">

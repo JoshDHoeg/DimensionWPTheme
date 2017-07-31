@@ -1,9 +1,9 @@
-		<footer>
-			<!-- <p>This is my footer</p>
-			<?php wp_nav_menu(array('theme_location'=>'secondary')); ?> -->
-		</footer>
-	</section>
-	</div><!-- .container -->
+				<footer>
+					<!--need to have this here if there isnt any content in footer-->
+				</footer>
+
+			</div><!-- content outer wrapper -->
+		</section><!-- background wrapper-->
 
 	<?php wp_footer(); ?>
 
