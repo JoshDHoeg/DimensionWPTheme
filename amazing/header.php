@@ -7,6 +7,9 @@
 
 		<title>A Different Dimension</title>
 		<?php wp_head(); ?>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
 	</head>
 
 	<?php

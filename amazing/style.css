@@ -3,7 +3,7 @@
 	Author: Josh Hoeg
 	Author URI: http://joshdhoeg.com
 	Description: This is a theme designed for a company called A Different Dimension, it should be responsive to all devices. The theme should have give the impression of being from a different dimension and refrain from being like any other regular wordpress theme.
-	Version: 0.1 alpha
+	Version: 0.1.1 alpha
 	Tags: black, responsive, one-column, two-columns, featured-images, custom-menu, custom-header, post-formats, sidenav
   Copyright (c) 2017 Copyright Holder All Rights Reserved.
 */
@@ -15,9 +15,12 @@ It was created for a company called A Different Dimension, and if for any reason
 it is used for other reasons.... Well haha not much I can do about it so go for it.
 Just remember I probably suck at coding ;)
 \---------------------------------------------------------------------------*/
+*{
+  font-family: 'Electrolize', sans-serif;
+    color: #e5e5e5 !important;
+}
 body{
   overflow-x: hidden;
-
 }
 
 .container-fluid{
@@ -85,7 +88,6 @@ body{
 }
 .sidenav-toggle span{
   font-size: 50px;
-  color: #ffffff;
 }
 .sidenav-brand{
   display: block;
@@ -110,11 +112,10 @@ body{
   text-align: center;
 }
 .sidenav .sidenav-menu a{
-  color: #ffffff;
   font-size: 20px;
 }
 .sidenav .sidenav-menu a:hover{
-  color: #000000;
+  color: #000000 !important;
 }
 #menu-main-navigation{
   margin: 0;
@@ -158,6 +159,7 @@ body{
   }
   .sidenav-social{
       width: 100%;
+      left: 0;
   }
   .sidenav-toggle{
     display: block;
@@ -175,7 +177,6 @@ body{
   padding: 0;
 }
 .latest-posts .latest-posts-item{
-  /*background-color: #000000;*/
   background-color: rgba(50,50,50,0.9);
   border-radius: 0;
   border: none;
@@ -199,7 +200,7 @@ body{
 }
 @media only screen and (max-width: 1200px) {
   .thumbnail-image .thumbnail{
-    height: 240px !important;
+    height: 220px !important;
   }
 }
 @media only screen and (max-width: 994px) {
@@ -226,11 +227,10 @@ body{
     padding: 0;
 }
 .latest-posts .latest-posts-item a{
-  color: #ffffff;
 }
 .latest-posts .latest-posts-item a h1{
   font-size: 28px;
-  padding: 0 20px 0 20px;
+  padding: 0 10px 0 10px;
 }
 .latest-posts .latest-posts-item a:hover{
   text-decoration: none;
@@ -248,16 +248,14 @@ body{
 }
 .modal .modal-content{
   background: #000000;
-  color: #ffffff;
 }
 .modal .modal-header, .modal .modal-footer{
   border-color: #383838;
 }
 .modal .modal-header small{
-  color: #707070;
+  color: #707070 !important;
 }
 .modal .modal-header .close{
-  color: #ffffff;
   font-size: 20px;
 }
 .modal .modal-header .thumbnail{
@@ -293,6 +291,5 @@ body{
 
 
 .page-content{
-  color: #ffffff;
   background: rgba(0, 0, 0, 0.75);
 }
