@@ -6,15 +6,14 @@
 				<a href="" data-toggle="modal" data-target="#post-detail-<?php the_ID(); ?>">
 					<div class="thumbnail-title">
 						<h1>
+							<!-- <?php the_title() ?> -->
 							<?php
 								$thetitle = $post->post_title; /* or you can use get_the_title() */
 								$getlength = strlen($thetitle);
-								$thelength = 28;
+								$thelength = 64;
 								echo substr($thetitle, 0, $thelength);
-								if ($getlength > $thelength) echo "...";
 							?>
 						</h1>
-						<small>Posted on: <?php the_time('F j, Y'); ?> by <?php get_the_author(); ?></small>
 					</div>
 					<div class="thumbnail-image container col-xs-12">
 						<div class="thumbnail">
@@ -48,7 +47,7 @@
 									<?php endif; ?>
 								</div>
 								<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="button" class="close-btn" data-dismiss="modal">Close</button>
 								</div>
 						</div>
 				</div>

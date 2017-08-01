@@ -49,10 +49,10 @@
 				?>
 				<a class="sidenav-brand-logo" href="/"><img src="<?php echo $image[0]; ?>"></a>
 			</div>
-			<div class="sidenav-toggle" onclick="navclose()" id="navclose"><!--navbar close-->
+			<div class="sidenav-toggle" onclick="navclose()" id="navclose">
 					<span>&#8918;</span>
 			</div>
-			<div class="sidenav-toggle" onclick="navopen()" id="navopen"><!--navbar open-->
+			<div class="sidenav-toggle" onclick="navopen()" id="navopen">
 					<span>&#8919;</span>
 			</div>
 		</div><!--navbar container-->
